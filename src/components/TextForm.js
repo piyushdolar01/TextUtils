@@ -34,17 +34,17 @@ setText(newText)
     // setText=("new text");
   return (
     <>
-    <div className='container'>
+    <div className='container'style={{color: props.Mode=== 'dark'?'white':'#042743'}}>
     <h1>{props.heading}</h1>
   <div className="mb-3">
-    <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+    <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.Mode=== 'dark'?'grey':'white',color:props.Mode=== 'dark'?'white':'#042743'}}id="myBox" rows="8"></textarea>
   </div>
   <button className="btn btn-primary mx-2"onClick={handleUpClick}>Conver to Uppercase</button>
   <button className="btn btn-primary mx-2"onClick={handlelpClick}>Conver to Lowercase</button>
   <button className="btn btn-primary mx-2"onClick={handlecopy}>Copy text</button>
   <button className="btn btn-primary mx-2"onClick={ handleExtraSpaces}>Extra Spaces</button>
     </div>  
-    <div className="container my-3">
+    <div className="container my-3"style={{color: props.Mode=== 'dark'?'white':'#042743'}}>
         <h2>Your text summary</h2>
         <p>{text.split(" ").length} words and {text.length}character</p>
         <p>{0.008*text.split(" ").length} Minutes read</p>
